@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application - Personal Details</title>
+  </head>
+  <body>
+    <h2>Job Application Form - Page 1: Personal Details</h2>
+    <form action="education.html" method="post">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="address">Address:</label><br />
+      <textarea id="address" name="address" rows="4" required></textarea
+      ><br /><br />
+
+      <label for="contact">Contact Info:</label><br />
+      <input
+        type="tel"
+        id="contact"
+        name="contact"
+        pattern="[0-9]{10}"
+        placeholder="Enter 10-digit phone number"
+        required
+      /><br /><br />
+
+      <button type="submit">Next</button>
+    </form>
+  </body>
+</html>
