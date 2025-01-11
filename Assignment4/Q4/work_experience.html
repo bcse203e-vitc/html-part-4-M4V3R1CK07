@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application - Work Experience</title>
+  </head>
+  <body>
+    <h2>Job Application Form - Page 3: Work Experience & Resume Upload</h2>
+    <form action="submit.html" method="post" enctype="multipart/form-data">
+      <label for="company">Company Name:</label><br />
+      <input type="text" id="company" name="company" required /><br /><br />
+
+      <label for="designation">Designation:</label><br />
+      <input
+        type="text"
+        id="designation"
+        name="designation"
+        required
+      /><br /><br />
+
+      <label for="duration">Duration:</label><br />
+      <input
+        type="text"
+        id="duration"
+        name="duration"
+        placeholder="e.g., 2 years"
+        required
+      /><br /><br />
+
+      <label for="resume">Upload Resume:</label><br />
+      <input
+        type="file"
+        id="resume"
+        name="resume"
+        accept=".pdf,.doc,.docx"
+        required
+      /><br /><br />
+
+      <button type="button" onclick="window.location.href='education.html'">
+        Previous
+      </button>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

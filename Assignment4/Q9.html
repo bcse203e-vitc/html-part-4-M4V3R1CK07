@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Booking Form</title>
+  </head>
+  <body>
+    <h2>Hotel Booking Form</h2>
+
+    <!-- Booking Form -->
+    <form action="/submit-booking" method="post">
+      <!-- Full Name -->
+      <label for="name">Full Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <!-- Contact Information -->
+      <label for="contact">Contact Info:</label><br />
+      <input type="email" id="contact" name="contact" required /><br /><br />
+
+      <!-- Check-in Date -->
+      <label for="checkin">Check-in Date:</label><br />
+      <input type="date" id="checkin" name="checkin" required /><br /><br />
+
+      <!-- Check-out Date -->
+      <label for="checkout">Check-out Date:</label><br />
+      <input type="date" id="checkout" name="checkout" required /><br /><br />
+
+      <!-- Number of Guests -->
+      <label for="guests">Number of Guests:</label><br />
+      <input
+        type="number"
+        id="guests"
+        name="guests"
+        min="1"
+        required
+      /><br /><br />
+
+      <!-- Room Type -->
+      <label for="roomType">Room Type:</label><br />
+      <select id="roomType" name="roomType" required>
+        <option value="" disabled selected>Select Room Type</option>
+        <option value="Single">Single</option>
+        <option value="Double">Double</option>
+        <option value="Suite">Suite</option></select
+      ><br /><br />
+
+      <!-- Additional Services -->
+      <p>Additional Services:</p>
+      <input type="checkbox" id="breakfast" name="services" value="Breakfast" />
+      <label for="breakfast">Breakfast</label><br />
+      <input
+        type="checkbox"
+        id="airportPickup"
+        name="services"
+        value="Airport Pickup"
+      />
+      <label for="airportPickup">Airport Pickup</label><br /><br />
+
+      <!-- Total Cost (Static field) -->
+      <label for="totalCost">Total Cost:</label><br />
+      <input
+        type="text"
+        id="totalCost"
+        name="totalCost"
+        placeholder="Calculated Total Cost"
+        readonly
+      /><br /><br />
+
+      <!-- Submit Button -->
+      <button type="submit">Book Now</button>
+    </form>
+  </body>
+</html>

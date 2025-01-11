@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Online Event</title>
+</head>
+<body>
+ <h1>Online Event Registration Form</h1>
+ <form action="/login" method="post">
+    <label for="fullName"><strong>Full Name:</strong></label><br>
+    <input type="text" name="fullName" id="fullName"><br><br>
+    <label for="email"><strong>Email:</strong></label><br>
+    <input type="email" name="email" id="email" pattern="^[^@]+@[^@]+\.[^@]+$"><br><br>
+    <label for="phNumber"><strong>Phone Number:</strong></label><br>
+    <input type="tel" name="phNumber" id="phNumber" pattern="[6-9]{1}[0-9]{9}"><br><br>
+    <label for="gender"><strong>Gender:</strong></label><br>
+    <div>
+        Male
+        <input type="radio" name="gender" id="male">
+        Female
+        <input type="radio" name="gender" id="female">
+    </div><br>
+    <label for="ageGroups"><strong>Age Group:</strong></label><br>
+    <input list="ageGroups" name="ageGroup">
+    <datalist id="ageGroups">
+        <option value="Children">
+        <option value="Adults">
+        <option value="Seniors">
+    </datalist><br><br>
+    <label for="topicsOfInterest"><strong>Topics of Interest:</strong></label>
+    <div>
+        Sports
+        <input type="checkbox" name="interests" id="sports">
+        Games
+        <input type="checkbox" name="interests" id="games">
+        Anime
+        <input type="checkbox" name="interests" id="anime">
+        Cooking
+        <input type="checkbox" name="interests" id="cooking">
+    </div><br>
+    <label for="comments"><strong>Comments:</strong></label><br>
+    <textarea name="comments" id="comments" rows="10" column="10"></textarea><br><br>
+    <button type="submit">Register</button>
+ </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Quiz Submission Form</title>
+  </head>
+  <body>
+    <h2>Online Quiz Submission Form</h2>
+
+    <!-- Quiz Form -->
+    <form action="/submit-quiz" method="post">
+      <!-- Name -->
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <!-- Email -->
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <!-- Question 1 -->
+      <p>Question 1: What is the capital of France?</p>
+      <input type="radio" id="q1a" name="q1" value="Paris" required />
+      <label for="q1a">Paris</label><br />
+      <input type="radio" id="q1b" name="q1" value="London" />
+      <label for="q1b">London</label><br />
+      <input type="radio" id="q1c" name="q1" value="Berlin" />
+      <label for="q1c">Berlin</label><br /><br />
+
+      <!-- Question 2 -->
+      <p>Question 2: Which of these is a programming language?</p>
+      <input type="radio" id="q2a" name="q2" value="Java" required />
+      <label for="q2a">Java</label><br />
+      <input type="radio" id="q2b" name="q2" value="HTML" />
+      <label for="q2b">HTML</label><br />
+      <input type="radio" id="q2c" name="q2" value="CSS" />
+      <label for="q2c">CSS</label><br /><br />
+
+      <!-- Question 3 (Multiple Answers) -->
+      <p>
+        Question 3: Select the colors in the rainbow (Multiple answers
+        possible):
+      </p>
+      <input type="checkbox" id="q3a" name="q3" value="Red" />
+      <label for="q3a">Red</label><br />
+      <input type="checkbox" id="q3b" name="q3" value="Blue" />
+      <label for="q3b">Blue</label><br />
+      <input type="checkbox" id="q3c" name="q3" value="Purple" />
+      <label for="q3c">Purple</label><br /><br />
+
+      <!-- Timer Placeholder -->
+      <label for="timer">Time Remaining:</label><br />
+      <input
+        type="text"
+        id="timer"
+        name="timer"
+        placeholder="Time remaining: 10:00"
+        readonly
+      /><br /><br />
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Quiz</button>
+    </form>
+  </body>
+</html>

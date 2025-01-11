@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Booking Form</title>
+  </head>
+  <body>
+    <h2>Travel Booking Form</h2>
+    <form action="/submit-booking" method="post">
+      <!-- Full Name -->
+      <label for="fullName">Full Name:</label><br />
+      <input type="text" id="fullName" name="fullName" required /><br /><br />
+
+      <!-- Contact Information -->
+      <label for="contactInfo">Contact Information:</label><br />
+      <input
+        type="email"
+        id="contactInfo"
+        name="contactInfo"
+        required
+      /><br /><br />
+
+      <!-- Destination -->
+      <label for="destination">Destination:</label><br />
+      <select id="destination" name="destination" required>
+        <option value="" disabled selected>Select a destination</option>
+        <option value="Paris">Paris</option>
+        <option value="New York">New York</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Sydney">Sydney</option>
+        <option value="London">London</option></select
+      ><br /><br />
+
+      <!-- Travel Dates -->
+      <label for="travelDates">Travel Dates:</label><br />
+      <input
+        type="date"
+        id="travelDates"
+        name="travelDates"
+        required
+      /><br /><br />
+
+      <!-- Number of Travelers -->
+      <label for="numTravelers">Number of Travelers:</label><br />
+      <input
+        type="number"
+        id="numTravelers"
+        name="numTravelers"
+        min="1"
+        required
+      /><br /><br />
+
+      <!-- Travel Class -->
+      <label>Travel Class:</label><br />
+      <input
+        type="radio"
+        id="economy"
+        name="travelClass"
+        value="Economy"
+        required
+      />
+      <label for="economy">Economy</label><br />
+      <input
+        type="radio"
+        id="business"
+        name="travelClass"
+        value="Business"
+        required
+      />
+      <label for="business">Business</label><br />
+      <input
+        type="radio"
+        id="firstClass"
+        name="travelClass"
+        value="First Class"
+        required
+      />
+      <label for="firstClass">First Class</label><br /><br />
+
+      <!-- Travel Insurance -->
+      <label for="insurance">Opt for Travel Insurance:</label><br />
+      <input type="checkbox" id="insurance" name="insurance" />
+      <label for="insurance">Yes, I want travel insurance</label><br /><br />
+
+      <!-- Total Cost (Static field) -->
+      <label for="totalCost">Total Cost:</label><br />
+      <input type="text" id="totalCost" name="totalCost" readonly /><br /><br />
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </body>
+</html>
