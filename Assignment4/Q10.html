@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customizable Form Template</title>
+  </head>
+  <body>
+    <h2>Create Your Custom Form</h2>
+
+    <!-- Form Inputs for Customization -->
+    <form id="formCustomizer">
+      <!-- Form Name -->
+      <label for="formName">Form Name:</label><br />
+      <input type="text" id="formName" name="formName" required /><br /><br />
+
+      <!-- Number of Fields -->
+      <label for="numFields">Number of Input Fields:</label><br />
+      <input
+        type="number"
+        id="numFields"
+        name="numFields"
+        min="1"
+        required
+      /><br /><br />
+
+      <button type="button" onclick="generateForm()">Generate Form</button>
+    </form>
+
+    <h3>Form Preview:</h3>
+    <form id="generatedForm"></form>
+
+    <script>
+      // Function to dynamically generate the form preview
+      function generateForm() {
+        const numFields = document.getElementById("numFields").value;
+        const formName = document.getElementById("formName").value;
+        const formContainer = document.getElementById("generatedForm");
+
+        // Clear the previous form if any
+        formContainer.innerHTML = `<h3>${formName}</h3>`;
+
+        // Generate form fields based on user input
+        for (let i = 1; i <= numFields; i++) {
+          const fieldLabel = prompt(`Enter label for field ${i}:`);
+          const fieldType = prompt(
+            `Enter field type for field ${i} (Text, Email, Number, Date):`
+          );
+
+          // Create the label and input elements dynamically
+          const fieldContainer = document.createElement("div");
+
+          const label = document.createElement("label");
+          label.textContent = fieldLabel;
+
+          const input = document.createElement("input");
+          input.type = fieldType.toLowerCase();
+          input.name = `field${i}`;
+          input.required = true;
+
+          fieldContainer.appendChild(label);
+          fieldContainer.appendChild(input);
+
+          formContainer.appendChild(fieldContainer);
+        }
+
+        // Add submit button at the end of the form
+        const submitButton = document.createElement("button");
+        submitButton.textContent = "Submit Form";
+        submitButton.type = "submit";
+        formContainer.appendChild(submitButton);
+      }
+    </script>
+  </body>
+</html>
